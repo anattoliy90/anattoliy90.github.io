@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //make constants
-    base.value = "3 500";
+    base.value = "100";
     var tax = 1.2;
     var disc = 0.6;
     var bonusForNdNev = 4010;
