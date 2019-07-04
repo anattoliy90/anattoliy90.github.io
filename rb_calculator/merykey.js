@@ -973,6 +973,29 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     directorVal.oninput = function () {
+        //скидка в зависимости от количества директоров
+        var allTr = document.querySelectorAll('.table-rows-group-sm');
+
+        if (this.value <= 99) {
+            tableShortDiscount.value = 0;
+        } else if(this.value > 99 && this.value <= 299) {
+            if (allTr.length <= 2) {
+                tableShortDiscount.value = 4;
+            } else if (allTr.length > 2 && allTr.length <= 4) {
+                tableShortDiscount.value = 4.5;
+            } else if(allTr.length > 4) {
+                tableShortDiscount.value = 5;
+            }
+        } else if(this.value > 299) {
+            if (allTr.length <= 2) {
+                tableShortDiscount.value = 5;
+            } else if (allTr.length > 2 && allTr.length <= 4) {
+                tableShortDiscount.value = 5.5;
+            } else if(allTr.length > 4) {
+                tableShortDiscount.value = 6;
+            }
+        }
+
         var roubleVal = +this.value * returnNumFor(base.value);
         directorNum.value = numberFormat(Math.round(roubleVal), 0, ',', ' ');
         if(nowSailerPosition < 11) {
@@ -1034,29 +1057,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             //warning2.style.display = "none";
             //this.style.background = 'transparent';
-        }
-
-        //скидка в зависимости от количества директоров
-        var allTr = document.querySelectorAll('.table-rows-group-sm');
-
-        if (this.value <= 99) {
-            tableShortDiscount.value = 0;
-        } else if(this.value > 99 && this.value <= 299) {
-            if (allTr.length <= 2) {
-                tableShortDiscount.value = 4;
-            } else if (allTr.length > 2 && allTr.length <= 4) {
-                tableShortDiscount.value = 4.5;
-            } else if(allTr.length > 4) {
-                tableShortDiscount.value = 5;
-            }
-        } else if(this.value > 299) {
-            if (allTr.length <= 2) {
-                tableShortDiscount.value = 5;
-            } else if (allTr.length > 2 && allTr.length <= 4) {
-                tableShortDiscount.value = 5.5;
-            } else if(allTr.length > 4) {
-                tableShortDiscount.value = 6;
-            }
         }
 
         director2Num1.value = numberFormat(Math.round(returnNumFor(directorNum.value) * directorDiscount.value / 100 / tax * disc), 0, ',', ' ');
