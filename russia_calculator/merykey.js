@@ -1481,6 +1481,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    if(isIE){
+        internationalLevel.onchange = function () {
+            if (internationalLevel.checked) {
+                directorDiscount.value = 18;
+            } else {
+                directorDiscount.value = 13;
+            }
+        }
+    }
+
     function recalcBonus() {
         var allBonusSum = 0;
 
