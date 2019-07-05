@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //     //var hideThenKingDirector =  document.querySelector('#hideThenKingDirector'); //супердиректор количество консультов
 //     var stylesDouble = document.querySelector('#stylesDouble'); //стили
 //     var director2Num2Span = document.querySelector('#director2Num2Span'); //стили span
-    var biggestdirectorBounusNd = document.querySelector('#biggestdirectorBounusNd'); //бонус количество конс супер директор
+    //var biggestdirectorBounusNd = document.querySelector('#biggestdirectorBounusNd'); //бонус количество конс супер директор
     var biggestdirectorBounusResult = document.querySelector('#biggestdirectorBounusResult'); //бонус супер директор
     var amountDebutBonus = document.querySelector('#amountDebutBonus'); //значения ползунка
     var biggestdirectorActVallBonus = document.querySelector('#biggestdirectorActVallBonus'); //последний ползунок значения
@@ -1441,13 +1441,13 @@ document.addEventListener('DOMContentLoaded', function() {
             changeSize(biggestdirector2NumAct);
         };
 
-        biggestdirectorBounusNd.onchange = function () {
+        /*biggestdirectorBounusNd.onchange = function () {
             biggestdirectorBounusResult.value = numberFormat((+this.value * bonusForNdDev), 0, ',', ' ');
             biggestdirectorActVallBonus.innerHTML = this.value;
             changeBonusRange(this.value);
             recalculate(nowSailerPosition);
             changeSize(biggestdirectorBounusResult);
-        };
+        };*/
     }
 
 
