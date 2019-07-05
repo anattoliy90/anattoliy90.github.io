@@ -1471,18 +1471,18 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     };
 
-    internationalLevel.addEventListener('change', changeInternationalLevel);
-
-    function changeInternationalLevel() {
-        if (internationalLevel.checked) {
-            directorDiscount.value = 18;
-        } else {
-            directorDiscount.value = 13;
-        }
-    }
-
-    if(isIE){
+    if(isIE) {
         internationalLevel.onchange = function () {
+            if (internationalLevel.checked) {
+                directorDiscount.value = 18;
+            } else {
+                directorDiscount.value = 13;
+            }
+        }
+    } else {
+        internationalLevel.addEventListener('change', changeInternationalLevel);
+
+        function changeInternationalLevel() {
             if (internationalLevel.checked) {
                 directorDiscount.value = 18;
             } else {
