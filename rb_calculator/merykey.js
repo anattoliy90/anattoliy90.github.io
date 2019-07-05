@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var directorVal = document.querySelector('#directorVal'); //директор вводимое значение
     var directorNum = document.querySelector('#directorNum'); //директор расчетное значение
     var directorDiscount = document.querySelector('#directorDiscount'); //директор скидка
+    //var internationalLevelBlock = document.querySelector('.international-level-block');
+    //var internationalLevel = document.querySelector('#internationalLevel'); //процент международного уровеня
 
     var director2Num1 = document.querySelector('#director2Num1'); //директор расчетное значение 1
     var director2Num2 = document.querySelector('#director2Num2'); //директор расчетное значение 1
@@ -270,6 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sailerStatus3Container.style.display = "none";
             snoskaNum1.style.display = "none";
             snoskaNum4.style.display = "none";
+            //internationalLevelBlock.style.display = "none";
             //twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             //firstTrNotBigDirector.style.display = "none";
@@ -284,6 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
             biggestdirector.style.display = "none";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
+            //internationalLevelBlock.style.display = "none";
             //twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             //firstTrNotBigDirector.style.display = "none";
@@ -298,6 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
+            //internationalLevelBlock.style.display = "none";
             // twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "none";
@@ -314,6 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
+            //internationalLevelBlock.style.display = "none";
             // twoLine.style.display = "none";
             // thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "table-row";
@@ -329,6 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
+            //internationalLevelBlock.style.display = "flex";
             //twoLine.style.display = "table-row";
             //thirdLine.style.display = "table-row";
             //firstTrNotBigDirector.style.display = "none";
@@ -383,6 +390,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sailerStatus3Container.style.display = "none";
             snoskaNum1.style.display = "none";
             snoskaNum4.style.display = "none";
+            //internationalLevelBlock.style.display = "none";
             //twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             //firstTrNotBigDirector.style.display = "none";
@@ -397,6 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
             biggestdirector.style.display = "none";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
+            //internationalLevelBlock.style.display = "none";
             //twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             //firstTrNotBigDirector.style.display = "none";
@@ -411,6 +420,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
+            //internationalLevelBlock.style.display = "none";
             // twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "none";
@@ -427,6 +437,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
+            //internationalLevelBlock.style.display = "none";
             // twoLine.style.display = "none";
             // thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "table-row";
@@ -442,6 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
+            //internationalLevelBlock.style.display = "flex";
             //twoLine.style.display = "table-row";
             //thirdLine.style.display = "table-row";
             //firstTrNotBigDirector.style.display = "none";
@@ -496,6 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sailerStatus3Container.style.display = "none";
                 snoskaNum1.style.display = "none";
                 snoskaNum4.style.display = "none";
+                //internationalLevelBlock.style.display = "none";
                 //twoLine.style.display = "none";
                 //thirdLine.style.display = "none";
                 //firstTrNotBigDirector.style.display = "none";
@@ -510,6 +523,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 biggestdirector.style.display = "none";
                 snoskaNum1.style.display = "block";
                 snoskaNum4.style.display = "block";
+                //internationalLevelBlock.style.display = "none";
                 //twoLine.style.display = "none";
                 //thirdLine.style.display = "none";
                 //firstTrNotBigDirector.style.display = "none";
@@ -524,6 +538,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sailerStatus3Container.style.display = "flex";
                 snoskaNum1.style.display = "block";
                 snoskaNum4.style.display = "block";
+                //internationalLevelBlock.style.display = "none";
                 // twoLine.style.display = "none";
                 //thirdLine.style.display = "none";
                 // firstTrNotBigDirector.style.display = "none";
@@ -540,6 +555,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sailerStatus3Container.style.display = "flex";
                 snoskaNum1.style.display = "block";
                 snoskaNum4.style.display = "block";
+                //internationalLevelBlock.style.display = "none";
                 // twoLine.style.display = "none";
                 // thirdLine.style.display = "none";
                 // firstTrNotBigDirector.style.display = "table-row";
@@ -555,6 +571,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sailerStatus3Container.style.display = "flex";
                 snoskaNum1.style.display = "block";
                 snoskaNum4.style.display = "block";
+                //internationalLevelBlock.style.display = "flex";
                 //twoLine.style.display = "table-row";
                 //thirdLine.style.display = "table-row";
                 //firstTrNotBigDirector.style.display = "none";
@@ -672,6 +689,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } else {
             directorDiscount.value = 13;
+
+            /*if(internationalLevel.checked) {
+                directorDiscount.value = 18;
+            }*/
+
             director2Num2.value = 0;
         }
 
@@ -1477,6 +1499,16 @@ document.addEventListener('DOMContentLoaded', function() {
             recalcBonus();
         };
     };
+
+    /*internationalLevel.addEventListener('change', changeInternationalLevel);
+
+    function changeInternationalLevel() {
+        if (internationalLevel.checked) {
+            directorDiscount.value = 18;
+        } else {
+            directorDiscount.value = 13;
+        }
+    }*/
 
     function recalcBonus() {
         var allBonusSum = 0;
