@@ -1028,6 +1028,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } else {
             directorDiscount.value = 13;
+
+            if(internationalLevel.checked) {
+                directorDiscount.value = 18;
+            }
+
             director2Num2.value = 0;
         }
 
@@ -1479,6 +1484,9 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             directorDiscount.value = 13;
         }
+
+        recalculatePersent(nowSailerPosition);
+        recalculate(nowSailerPosition);
     }
 
     function recalcBonus() {
