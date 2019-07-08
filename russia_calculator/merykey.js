@@ -1255,8 +1255,10 @@ document.addEventListener('DOMContentLoaded', function() {
     //
     biggestdirectorVal2.oninput = function () {
         var roubleVal = +this.value * returnNumFor(base.value);
-        biggestdirectorNum21.value = numberFormat(Math.round(roubleVal), 0, ',', ' ');
-        biggestdirector2Num2.value = numberFormat(Math.round(returnNumFor(biggestdirectorNum21.value) / 100 * biggestdirectorNum22.value / tax * disc), 0, ',', ' ');
+        var numRoubleVal = numberFormat(Math.round(roubleVal), 0, ',', ' ');
+        //biggestdirectorNum21.value = numberFormat(Math.round(roubleVal), 0, ',', ' ');
+        biggestdirectorNum21.value = numberFormat(Math.round(returnNumFor(numRoubleVal) / 100 * biggestdirectorNum22.value / tax * disc), 0, ',', ' ');
+        biggestdirector2Num2.value = numberFormat(Math.round(returnNumFor(numRoubleVal) / 100 * biggestdirectorNum22.value / tax * disc), 0, ',', ' ');
 
         recalculate(nowSailerPosition);
         changeSize(biggestdirectorNum21);
@@ -1265,8 +1267,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     biggestdirectorVal3.oninput = function () {
         var roubleVal = +this.value * returnNumFor(base.value);
-        biggestdirectorNum31.value = numberFormat(Math.round(roubleVal), 0, ',', ' ');
-        biggestdirector2Num3.value = numberFormat(Math.round(returnNumFor(biggestdirectorNum31.value) / 100 * biggestdirectorNum32.value / tax * disc), 0, ',', ' ');
+        var numRoubleVal = numberFormat(Math.round(roubleVal), 0, ',', ' ');
+        //biggestdirectorNum31.value = numberFormat(Math.round(roubleVal), 0, ',', ' ');
+        biggestdirectorNum31.value = numberFormat(Math.round(returnNumFor(numRoubleVal) / 100 * biggestdirectorNum32.value / tax * disc), 0, ',', ' ');
+        biggestdirector2Num3.value = numberFormat(Math.round(returnNumFor(numRoubleVal) / 100 * biggestdirectorNum32.value / tax * disc), 0, ',', ' ');
 
         recalculate(nowSailerPosition);
         changeSize(biggestdirectorNum31);

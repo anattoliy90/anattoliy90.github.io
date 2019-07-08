@@ -80,15 +80,15 @@ label,
     padding-bottom: 0;
 }
 .international-level-block .internationalLevelLabel::before{
-    content: '';
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 14px;
     position: absolute;
-    top: 5px;
-    left: -21px;
+    top: 2px;
+    left: -24px;
     display: none;
-    width: 8px;
-    height: 8px;
-    background: #ed7fa6;
-    border-radius: 50%;
+    color: #ed7fa6;
     z-index: 10;
 }
 .international-level-block .internationalLevelLabel::after {
@@ -101,7 +101,6 @@ label,
     height: 16px;
     background: #f0f0f0;
     border: 1px solid #dbdbdb;
-    border-radius: 50%;
     z-index: 1;
 }
 input[name="internationalLevelBtn"]{
@@ -443,7 +442,7 @@ input#biggestdirectorBounusNd[type='range']::-moz-range-thumb{
     background: #fff;
 }
 .radioBtn-tooltip__small{
-    display: none;
+    /*display: none;*/
     padding: 0 20px;
     /*position: absolute;*/
     /*border: 1px solid #ed7fa6;*/
@@ -557,9 +556,9 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before{
 }
 .table-btn-container{
     position: absolute;
-    right: 6px;
+    right: 0;
     top: calc(50% - 15px);
-    max-width: 125px;
+    max-width: 112px;
     text-align: center;
 }
 .table-btn-container p{
@@ -571,7 +570,7 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before{
     right: 12px;
     top: calc(50% - 39px);
     text-align: center;
-    max-width: 270px;
+    max-width: 230px;
 }
 .table-btn-container-small p{
     padding-bottom: 12px;
