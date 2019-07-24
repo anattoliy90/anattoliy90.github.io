@@ -934,6 +934,15 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
     padding-top: 20px;
 }
 
+#bigkonsultant .container-key-item {
+    display: flex;
+    align-items: center;
+}
+
+#director .mary-key-design {
+    justify-content: center;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1250px) {
     /*.wrapper{*/
     /*width: 100%;*/
@@ -1111,5 +1120,12 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
 @media screen and (max-width: 550px) {
     .mary-key-design-bonus-block .bonus-block-input-container {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #bigkonsultant .container-key-item {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

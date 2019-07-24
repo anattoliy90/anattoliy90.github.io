@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     /*init variables*/
 
     var itog = document.querySelector('#itog'); //base unit
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var allInputs = document.querySelectorAll('input');
 
     //what is browser
-    function get_name_browser(){
+    function get_name_browser() {
         // получаем данные userAgent
         var ua = navigator.userAgent;
         // с помощью регулярок проверяем наличие текста,
@@ -135,32 +135,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    if(get_name_browser() == 'Firefox'){
+    if (get_name_browser() == 'Firefox') {
         for (var i = 0; i < allInputs.length; i++) {
-            allInputs[i].onkeypress = function(e){
-                if(this.classList.contains('table-name')){
+            allInputs[i].onkeypress = function (e) {
+                if (this.classList.contains('table-name')) {
 
-                    if (!(e.which==95 || e.which==45 || e.which==1105 || e.which==1025 || e.which==32 || (e.which>=1040 && e.which<=1103) || (e.which>=65 && e.which<=90) || (e.which>=65 && e.which<=90) || (e.which>=97 && e.which<=122) || (e.which>47 && e.which<58))) return false;
+                    if (!(e.which == 95 || e.which == 45 || e.which == 1105 || e.which == 1025 || e.which == 32 || (e.which >= 1040 && e.which <= 1103) || (e.which >= 65 && e.which <= 90) || (e.which >= 65 && e.which <= 90) || (e.which >= 97 && e.which <= 122) || (e.which > 47 && e.which < 58))) return false;
                 } else {
                     //console.log(e.which);
-                    if(this.id == 'bigkonsultantAct') {
-                        if (!(e.which==8 ||(e.which>47 && e.which<58))) return false;
+                    if (this.id == 'bigkonsultantAct') {
+                        if (!(e.which == 8 || (e.which > 47 && e.which < 58))) return false;
                     } else {
-                        if (!(e.which==8 || e.which==46 ||(e.which>47 && e.which<58))) return false;
+                        if (!(e.which == 8 || e.which == 46 || (e.which > 47 && e.which < 58))) return false;
                     }
                     //if (!(e.which==8 || e.which==46 || e.which==44 ||(e.which>47 && e.which<58))) return false;
                 }
             }
 
         }
-    } else if(get_name_browser() == 'Internet Explorer'){
+    } else if (get_name_browser() == 'Internet Explorer') {
         for (var i = 0; i < allInputs.length; i++) {
-            allInputs[i].onkeypress = function(e){
-                if(this.classList.contains('table-name')){
+            allInputs[i].onkeypress = function (e) {
+                if (this.classList.contains('table-name')) {
                     //console.log(e.keyCode);
-                    if (!(e.keyCode==95 || e.keyCode==45 || e.keyCode==1105 || e.keyCode==1025 || e.keyCode==32 || (e.keyCode>=1040 && e.keyCode<=1103) || (e.keyCode>=65 && e.keyCode<=90) || (e.keyCode>=65 && e.keyCode<=90) || (e.keyCode>=97 && e.keyCode<=122) || (e.keyCode>47 && e.keyCode<58))) return false;
+                    if (!(e.keyCode == 95 || e.keyCode == 45 || e.keyCode == 1105 || e.keyCode == 1025 || e.keyCode == 32 || (e.keyCode >= 1040 && e.keyCode <= 1103) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 97 && e.keyCode <= 122) || (e.keyCode > 47 && e.keyCode < 58))) return false;
                 } else {
-                    if(this.id == 'bigkonsultantAct') {
+                    if (this.id == 'bigkonsultantAct') {
                         if (!(e.keyCode == 8 || (e.keyCode > 47 && e.keyCode < 58))) return false;
                     } else {
                         if (!(e.keyCode == 8 || e.keyCode == 46 || (e.keyCode > 47 && e.keyCode < 58))) return false;
@@ -171,13 +171,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     } else {
         for (var i = 0; i < allInputs.length; i++) {
-            allInputs[i].onkeypress = function(e){
-                if(this.classList.contains('table-name')){
+            allInputs[i].onkeypress = function (e) {
+                if (this.classList.contains('table-name')) {
                     //console.log(e.keyCode);
-                    if (!(e.keyCode==95 || e.keyCode==45 || e.keyCode==1105 || e.keyCode==1025 || e.keyCode==32 || (e.keyCode>=1040 && e.keyCode<=1103) || (e.keyCode>=65 && e.keyCode<=90) || (e.keyCode>=65 && e.keyCode<=90) || (e.keyCode>=97 && e.keyCode<=122) || (e.keyCode>47 && e.keyCode<58))) return false;
+                    if (!(e.keyCode == 95 || e.keyCode == 45 || e.keyCode == 1105 || e.keyCode == 1025 || e.keyCode == 32 || (e.keyCode >= 1040 && e.keyCode <= 1103) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 97 && e.keyCode <= 122) || (e.keyCode > 47 && e.keyCode < 58))) return false;
                 } else {
                     //console.log(e.keyCode);
-                    if(this.id == 'bigkonsultantAct') {
+                    if (this.id == 'bigkonsultantAct') {
                         if (!(e.keyCode == 8 || (e.keyCode > 47 && e.keyCode < 58))) return false;
                     } else {
                         if (!(e.keyCode == 8 || e.keyCode == 46 || (e.keyCode > 47 && e.keyCode < 58))) return false;
@@ -211,12 +211,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return s.join(dec);
     }
+
     //return number format
-    function returnNumFor(string){
+    function returnNumFor(string) {
         var num = string.replace(/ /g, "");
         return parseFloat(num);
     }
-
 
 
 //make constants
@@ -227,17 +227,67 @@ document.addEventListener('DOMContentLoaded', function() {
     var bonusForNdDev = 42000;
 
     //для значка рубль меняем ширину input
-    function changeSize(elem){
-        if(elem.id == "itog") {
+    function changeSize(elem) {
+        if (elem.id == "itog") {
             return elem.style.width = ((elem.value.length) * 14.6) + 'px';
         } else {
             return elem.style.width = ((elem.value.length) * 13) + 'px';
         }
     }
-    function changeSizeSmall(elem){
+
+    function changeSizeSmall(elem) {
         return elem.style.width = ((elem.value.length) * 10) + 'px';
     }
-    function init(){
+
+    function colorEmptyInputs() {
+        var yellowColor = "#ffdd6e";
+        var greyColor = "#dbdbdb";
+
+        if(konsultantVal.value != 0 && konsultantVal.value != "") {
+            konsultantVal.style.borderColor = greyColor;
+        } else {
+            konsultantVal.style.borderColor = yellowColor;
+        }
+
+        if(bigkonsultantVal.value != 0 && bigkonsultantVal.value != "") {
+            bigkonsultantVal.style.borderColor = greyColor;
+        } else {
+            bigkonsultantVal.style.borderColor = yellowColor;
+        }
+
+        if(bigkonsultantAct.value != 0 && bigkonsultantAct.value != "") {
+            bigkonsultantAct.style.borderColor = greyColor;
+        } else {
+            bigkonsultantAct.style.borderColor = yellowColor;
+        }
+
+        if(directorVal.value != 0 && directorVal.value != "") {
+            directorVal.style.borderColor = greyColor;
+        } else {
+            directorVal.style.borderColor = yellowColor;
+        }
+
+        for (var i = 0; i < biggestdirectorBounusInputs.length; i++) {
+            if(biggestdirectorBounusInputs[i].value != 0 && biggestdirectorBounusInputs[i].value != "") {
+                biggestdirectorBounusInputs[i].style.borderColor = greyColor;
+            } else {
+                biggestdirectorBounusInputs[i].style.borderColor = yellowColor;
+            }
+        }
+    }
+
+    function hideColorEmptyInputs(input) {
+        var yellowColor = "#ffdd6e";
+        var greyColor = "#dbdbdb";
+
+        if(input.value != 0 && input.value != "") {
+            input.style.borderColor = greyColor;
+        } else {
+            input.style.borderColor = yellowColor;
+        }
+    }
+
+    function init() {
         //changeSize(konsultantNum);
         changeSizeSmall(konsultantNum);
         changeSize(konsultantProfit);
@@ -255,7 +305,9 @@ document.addEventListener('DOMContentLoaded', function() {
         changeSize(biggestdirector2NumAct);
         changeSize(biggestdirectorBounusResult);
         changeSize(sumOfAllDiectors);
+        colorEmptyInputs();
     }
+
     init();
 
     /*show/hide blocks*/
@@ -348,8 +400,8 @@ document.addEventListener('DOMContentLoaded', function() {
             //hideThenKingDirector.style.display = "none";
         }
         var showBiggestdirect = document.querySelectorAll('.show-biggestdirect'); //table for biggest direct
-        if(nowSailerPosition < 11){
-            for(var y = 0; y < showBiggestdirect.length; y++){
+        if (nowSailerPosition < 11) {
+            for (var y = 0; y < showBiggestdirect.length; y++) {
                 showBiggestdirect[y].style.display = "none";
             }
             //warning2.style.display = "block";
@@ -360,8 +412,8 @@ document.addEventListener('DOMContentLoaded', function() {
             director2Num2Span.style.display = "inline-block";
             stylesDouble.classList.add('mary-key-design-double');
             //stylesBorderDelete.style.borderBottom = "unset";
-        } else if(nowSailerPosition == 11){
-            for(var y = 0; y < showBiggestdirect.length; y++){
+        } else if (nowSailerPosition == 11) {
+            for (var y = 0; y < showBiggestdirect.length; y++) {
                 showBiggestdirect[y].style.display = "table-cell";
             }
             //warning2.style.display = "none";
@@ -383,11 +435,12 @@ document.addEventListener('DOMContentLoaded', function() {
         //calculatebigdirectorProfit();
         changeItogLabel(nowSailerPosition);
         recalculate(nowSailerPosition);
+        colorEmptyInputs();
     };
 
 
     //range-change
-    rangeSailerStatus.oninput = function (){
+    rangeSailerStatus.oninput = function () {
         if (+this.value == 1) {
             konsultant.style.display = "flex";
             bigkonsultant.style.display = "none";
@@ -469,8 +522,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         nowSailerPosition = this.value;
         var showBiggestdirect = document.querySelectorAll('.show-biggestdirect'); //table for biggest direct
-        if(nowSailerPosition < 11){
-            for(var y = 0; y < showBiggestdirect.length; y++){
+        if (nowSailerPosition < 11) {
+            for (var y = 0; y < showBiggestdirect.length; y++) {
                 showBiggestdirect[y].style.display = "none";
             }
             //warning2.style.display = "block";
@@ -481,8 +534,8 @@ document.addEventListener('DOMContentLoaded', function() {
             director2Num2Span.style.display = "inline-block";
             stylesDouble.classList.add('mary-key-design-double');
             //stylesBorderDelete.style.borderBottom = "unset";
-        } else{
-            for(var y = 0; y < showBiggestdirect.length; y++){
+        } else {
+            for (var y = 0; y < showBiggestdirect.length; y++) {
                 showBiggestdirect[y].style.display = "table-cell";
             }
             // warning2.style.display = "none";
@@ -504,10 +557,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // calculatebigdirectorProfit();
         changeItogLabel(nowSailerPosition);
         recalculate(this.value);
+        colorEmptyInputs();
     };
-    if(isIE){
+    if (isIE) {
         //range-change
-        rangeSailerStatus.onchange = function (){
+        rangeSailerStatus.onchange = function () {
             if (+this.value == 1) {
                 konsultant.style.display = "flex";
                 bigkonsultant.style.display = "none";
@@ -589,8 +643,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             nowSailerPosition = this.value;
             var showBiggestdirect = document.querySelectorAll('.show-biggestdirect'); //table for biggest direct
-            if(nowSailerPosition < 11){
-                for(var y = 0; y < showBiggestdirect.length; y++){
+            if (nowSailerPosition < 11) {
+                for (var y = 0; y < showBiggestdirect.length; y++) {
                     showBiggestdirect[y].style.display = "none";
                 }
                 //warning2.style.display = "block";
@@ -601,8 +655,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 director2Num2Span.style.display = "inline-block";
                 stylesDouble.classList.add('mary-key-design-double');
                 //stylesBorderDelete.style.borderBottom = "unset";
-            } else{
-                for(var y = 0; y < showBiggestdirect.length; y++){
+            } else {
+                for (var y = 0; y < showBiggestdirect.length; y++) {
                     showBiggestdirect[y].style.display = "table-cell";
                 }
                 // warning2.style.display = "none";
@@ -624,46 +678,48 @@ document.addEventListener('DOMContentLoaded', function() {
             // calculatebigdirectorProfit();
             changeItogLabel(nowSailerPosition);
             recalculate(this.value);
+            colorEmptyInputs();
         };
     }
+
 //re-calculate summ value than user change sail-level
-    function recalculate(sailPosition){
-        if(+sailPosition == 1){
+    function recalculate(sailPosition) {
+        if (+sailPosition == 1) {
             itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value)), 0, '.', ' ') + ' ₽';
-        } else if(+sailPosition > 1 && +sailPosition <= 5){
-            if(+konsultantVal.value == 0){
+        } else if (+sailPosition > 1 && +sailPosition <= 5) {
+            if (+konsultantVal.value == 0) {
                 bigkonsultantDiscountDop.value = 0;
             }
             itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value) + returnNumFor(bigkonsultantDiscountDop.value)), 0, '.', ' ') + ' ₽';
-        } else if(+sailPosition == 6){
-            if(+konsultantVal.value == 0){
+        } else if (+sailPosition == 6) {
+            if (+konsultantVal.value == 0) {
                 bigkonsultantDiscountDop.value = 0;
             }
             itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value) + returnNumFor(bigkonsultantDiscountDop.value) + returnNumFor(director2Num1.value)
                 + returnNumFor(director2Num2.value)), 0, '.', ' ') + ' ₽';
-        } else if(+sailPosition > 6 && +sailPosition <= 10){
-            if(+konsultantVal.value == 0){
+        } else if (+sailPosition > 6 && +sailPosition <= 10) {
+            if (+konsultantVal.value == 0) {
                 bigkonsultantDiscountDop.value = 0;
             }
-            if(directorVal.value < 100) {
+            if (directorVal.value < 100) {
                 bigdirectorProfit.value = 0;
             }
             itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value) + returnNumFor(bigkonsultantDiscountDop.value) + returnNumFor(director2Num1.value)
                 + returnNumFor(bigdirectorProfit.value) + returnNumFor(director2Num2.value)), 0, '.', ' ') + ' ₽';
-        } else if(+sailPosition == 11){
+        } else if (+sailPosition == 11) {
             bigkonsultantDiscountDop.value = numberFormat(Math.round(returnNumFor(bigkonsultantNum.value) * bigkonsultantDiscount.value / 100 / tax * disc), 0, ',', ' ');
 
             itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value) + returnNumFor(bigkonsultantDiscountDop.value) + returnNumFor(director2Num1.value)
                 + returnNumFor(bigdirectorProfitBig.value) + returnNumFor(biggestdirector2Num2.value) + returnNumFor(biggestdirector2Num3.value)
                 + returnNumFor(director2Num2.value) + returnNumFor(biggestdirector2NumAct.value)
-                +returnNumFor(biggestdirectorBounusResult.value) ), 0, '.', ' ') + ' ₽';
+                + returnNumFor(biggestdirectorBounusResult.value)), 0, '.', ' ') + ' ₽';
         }
         changeSize(itog);
         init();
     }
 
-    function recalculatePersent(sailPosition){
-        if(sailPosition < 11) {
+    function recalculatePersent(sailPosition) {
+        if (sailPosition < 11) {
             if (+directorVal.value <= 99) {
                 directorDiscount.value = 5;
                 director2Num2.value = 0;
@@ -708,20 +764,20 @@ document.addEventListener('DOMContentLoaded', function() {
             director2Num2.value = 0;
         }
 
-        if(+directorVal.value < 100 && sailPosition < 11){
+        if (+directorVal.value < 100 && sailPosition < 11) {
             //warning2.style.display = "block";
-            if(nowSailerPosition < 11) {
+            if (nowSailerPosition < 11) {
                 bigdirectorProfit.value = 0;
             }
-        } else{
-            if(nowSailerPosition < 11){
+        } else {
+            if (nowSailerPosition < 11) {
                 //bigdirectorProfit.value = Math.round(firstLineVolume.value * base.value * firstLinePercent.value / 100 / tax * disc);
             }
             //warning2.style.display = "none";
         }
-        if(+konsultantVal.value < 1 && sailPosition < 11){
+        if (+konsultantVal.value < 1 && sailPosition < 11) {
             //warning1.style.display = "block";
-        } else{
+        } else {
             //warning1.style.display = "none";
         }
 
@@ -729,39 +785,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /*heart with range*/
-    function changeHeart(pos){
-        if(pos == 1){
+    function changeHeart(pos) {
+        if (pos == 1) {
             heartRange.style.left = "37px";
-        } else if(pos == 2){
+        } else if (pos == 2) {
             heartRange.style.left = "122px";
-        } else if(pos == 3){
+        } else if (pos == 3) {
             heartRange.style.left = "208px";
-        } else if(pos == 4){
+        } else if (pos == 4) {
             heartRange.style.left = "296px";
-        } else if(pos == 5){
+        } else if (pos == 5) {
             heartRange.style.left = "382px";
-        } else if(pos == 6){
+        } else if (pos == 6) {
             heartRange.style.left = "469px";
-        } else if(pos == 7){
+        } else if (pos == 7) {
             heartRange.style.left = "557px";
-        } else if(pos == 8){
+        } else if (pos == 8) {
             heartRange.style.left = "642px";
-        } else if(pos == 9){
+        } else if (pos == 9) {
             heartRange.style.left = "730px";
-        } else if(pos == 10){
+        } else if (pos == 10) {
             heartRange.style.left = "816px";
-        } else if(pos == 11){
+        } else if (pos == 11) {
             heartRange.style.left = "902px";
         }
     }
 
     //function warnings
-    function warning1ColorOfFields(){
+    function warning1ColorOfFields() {
         var konsultantVal = document.querySelector('#konsultantVal');
-        if(nowSailerPosition < 11 && nowSailerPosition > 1 && konsultantVal.value < 1){
+        if (nowSailerPosition < 11 && nowSailerPosition > 1 && konsultantVal.value < 1) {
             konsultantVal.style.background = "#f00";
             warning1.style.display = "block";
-        } else if((nowSailerPosition == 11 || nowSailerPosition == 1) && konsultantVal.value >= 0){
+        } else if ((nowSailerPosition == 11 || nowSailerPosition == 1) && konsultantVal.value >= 0) {
             konsultantVal.style.background = "transparent";
             warning1.style.display = "none";
         } else {
@@ -770,22 +826,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function warning1ColorOfFHide(){
+    function warning1ColorOfFHide() {
         warning1.style.display = "none";
         konsultantVal.style.background = "transparent";
-        if(nowSailerPosition < 11 && konsultantVal.value < 1) {
+        if (nowSailerPosition < 11 && konsultantVal.value < 1) {
             // bigkonsultantVal.value = 0;
             // bigkonsultantNum.value = 0;
             changeSize(bigkonsultantNum);
         }
     }
 
-    function warning2ColorOfFields(){
+    function warning2ColorOfFields() {
         var directorVal = document.querySelector('#directorVal');
-        if(nowSailerPosition < 11 && nowSailerPosition >= 7 && directorVal.value < 100){
+        if (nowSailerPosition < 11 && nowSailerPosition >= 7 && directorVal.value < 100) {
             directorVal.style.background = "#f00";
             warning2.style.display = "block";
-        } else if(nowSailerPosition == 11 && directorVal.value >= 0){
+        } else if (nowSailerPosition == 11 && directorVal.value >= 0) {
             directorVal.style.background = "transparent";
             warning2.style.display = "none";
         } else {
@@ -794,10 +850,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function warning2ColorOfFHide(){
+    function warning2ColorOfFHide() {
         warning2.style.display = "none";
         directorVal.style.background = "transparent";
-        if(nowSailerPosition < 11 && directorVal.value < 100) {
+        if (nowSailerPosition < 11 && directorVal.value < 100) {
 
         }
     }
@@ -815,32 +871,32 @@ document.addEventListener('DOMContentLoaded', function() {
         //     }
         // }
         //else {
-        if(+this.value < 1){
-            selectDiscount1.checked="checked";
+        if (+this.value < 1) {
+            selectDiscount1.checked = "checked";
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +selectDiscount1.value / 100), 0, '.', ' ');
             // selectDiscount1.disabled = true;
             // selectDiscount2.disabled = true;
             // selectDiscount3.disabled = true;
             // selectDiscount4.disabled = true;
             //tooltipMoreEight.style.display = "none";
-        } else if(+this.value >= 1 && +this.value < 3){
-            selectDiscount2.checked="checked";
+        } else if (+this.value >= 1 && +this.value < 3) {
+            selectDiscount2.checked = "checked";
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +selectDiscount2.value / 100), 0, '.', ' ');
             // selectDiscount1.disabled = true;
             // selectDiscount2.disabled = true;
             // selectDiscount3.disabled = true;
             // selectDiscount4.disabled = true;
             //tooltipMoreEight.style.display = "none";
-        } else if(+this.value >= 3 && +this.value < 8){
-            selectDiscount3.checked="checked";
+        } else if (+this.value >= 3 && +this.value < 8) {
+            selectDiscount3.checked = "checked";
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +selectDiscount3.value / 100), 0, '.', ' ');
             // selectDiscount1.disabled = true;
             // selectDiscount2.disabled = true;
             // selectDiscount3.disabled = true;
             // selectDiscount4.disabled = true;
             //tooltipMoreEight.style.display = "none";
-        } else if(+this.value >= 8){
-            selectDiscount4.checked="checked";
+        } else if (+this.value >= 8) {
+            selectDiscount4.checked = "checked";
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +selectDiscount4.value / 100), 0, '.', ' ');
             //tooltipMoreEight.style.display = "block";
             // selectDiscount1.disabled = false;
@@ -857,13 +913,13 @@ document.addEventListener('DOMContentLoaded', function() {
         //}
 
 
-        if(+this.value < 1 && nowSailerPosition != 11){
+        if (+this.value < 1 && nowSailerPosition != 11) {
             bigkonsultantDiscountDop.value = 0;
             //warning1.style.display = "inline-block";
             // if(nowSailerPosition != 1) {
             //     this.style.background = '#f00';
             // }
-        } else if(+this.value >= 0 && nowSailerPosition == 11) {
+        } else if (+this.value >= 0 && nowSailerPosition == 11) {
             bigkonsultantDiscountDop.value = numberFormat(Math.round(returnNumFor(bigkonsultantNum.value) * bigkonsultantDiscount.value / 100 / tax * disc), 0, '.', ' ');
             // warning1.style.display = "none";
             // this.style.background = 'transparent';
@@ -873,15 +929,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // this.style.background = 'transparent';
         }
 
-        if(+this.value < 8 && selectDiscount4.checked == "checked"){
+        if (+this.value < 8 && selectDiscount4.checked == "checked") {
             tooltipSmall.style.display = "block";
-        } else{
+        } else {
             tooltipSmall.style.display = "none";
         }
         recalculate(nowSailerPosition);
         changeSize(bigkonsultantDiscountDop);
         changeSizeSmall(konsultantNum);
         changeSize(konsultantProfit);
+        hideColorEmptyInputs(konsultantVal);
     };
 
     /*konsultantVal.onblur = function(){
@@ -889,23 +946,24 @@ document.addEventListener('DOMContentLoaded', function() {
     };*/
 
 
-    for(var l = 0; l < konsultantDiscountRadio.length; l++){
+    for (var l = 0; l < konsultantDiscountRadio.length; l++) {
         konsultantDiscountRadio[l].addEventListener('change', calcDiscoutRadio);
     }
-    function calcDiscoutRadio(){
+
+    function calcDiscoutRadio() {
         var roubleVal = +konsultantVal.value * returnNumFor(base.value);
         konsultantNum.value = numberFormat(Math.round(roubleVal), 0, ',', ' ');
-        if(+this.value != 45 && +konsultantVal.value < 8) {
+        if (+this.value != 45 && +konsultantVal.value < 8) {
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +this.value / 100), 0, ',', ' ');
-        } else if(+this.value == 45 && +konsultantVal.value < 8){
+        } else if (+this.value == 45 && +konsultantVal.value < 8) {
             konsultantProfit.value = 0;
-        } else{
+        } else {
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +this.value / 100), 0, ',', ' ');
         }
 
-        if(+konsultantVal.value < 8 && +this.value == 45){
+        if (+konsultantVal.value < 8 && +this.value == 45) {
             tooltipSmall.style.display = "block";
-        } else{
+        } else {
             tooltipSmall.style.display = "none";
         }
         recalculate(nowSailerPosition);
@@ -936,10 +994,10 @@ document.addEventListener('DOMContentLoaded', function() {
         var roubleVal = +this.value * returnNumFor(base.value);
         bigkonsultantNum.value = numberFormat(Math.round(roubleVal), 0, ',', ' ');
 
-        if(+konsultantVal.value >= 1 && +this.value >= 1 && +nowSailerPosition != 11) {
+        if (+konsultantVal.value >= 1 && +this.value >= 1 && +nowSailerPosition != 11) {
             bigkonsultantDiscountDop.value = numberFormat(Math.round(returnNumFor(bigkonsultantNum.value) * bigkonsultantDiscount.value / 100 / tax * disc), 0, ',', ' ');
             recalculate(nowSailerPosition);
-        } else if(+this.value >= 1 && +nowSailerPosition == 11){
+        } else if (+this.value >= 1 && +nowSailerPosition == 11) {
             bigkonsultantDiscountDop.value = numberFormat(Math.round(returnNumFor(bigkonsultantNum.value) * bigkonsultantDiscount.value / 100 / tax * disc), 0, ',', ' ');
             recalculate(nowSailerPosition);
         } else {
@@ -948,54 +1006,55 @@ document.addEventListener('DOMContentLoaded', function() {
 
         changeSizeSmall(bigkonsultantNum);
         changeSize(bigkonsultantDiscountDop);
+        hideColorEmptyInputs(bigkonsultantVal);
     };
 
-    bigkonsultantVal.onfocus = function (){
+    bigkonsultantVal.onfocus = function () {
         warning1ColorOfFields();
     };
 
-    bigkonsultantVal.onblur = function (){
+    bigkonsultantVal.onblur = function () {
         warning1ColorOfFHide();
     };
 
 
     bigkonsultantAct.oninput = function () {
-        if(+this.value == 0){
+        if (+this.value == 0) {
             bigkonsultantDiscount.value = 0;
-        } else if(+this.value > 0 && +this.value <= 2){
+        } else if (+this.value > 0 && +this.value <= 2) {
             bigkonsultantDiscount.value = 0;
-        } else if(+this.value > 2 && +this.value <= 4){
+        } else if (+this.value > 2 && +this.value <= 4) {
             bigkonsultantDiscount.value = 4;
-        } else if(+this.value > 4 && +this.value <= 7){
+        } else if (+this.value > 4 && +this.value <= 7) {
             bigkonsultantDiscount.value = 8;
-        } else if(+this.value > 7){
+        } else if (+this.value > 7) {
             bigkonsultantDiscount.value = 12;
         }
-        if(+this.value == 0){
+        if (+this.value == 0) {
             bigkonsultantDiscountDop.value = 0;
         }
-        if(+nowSailerPosition <= 5){
-            if(+this.value  <= 2){
+        if (+nowSailerPosition <= 5) {
+            if (+this.value <= 2) {
                 nowSailerPosition = 2;
                 rangeSailerStatus.value = 2;
                 changeHeart(nowSailerPosition);
-            } else if(+this.value  > 2 && +this.value  <= 4){
+            } else if (+this.value > 2 && +this.value <= 4) {
                 nowSailerPosition = 3;
                 rangeSailerStatus.value = 3;
                 changeHeart(nowSailerPosition);
-            } else if(+this.value  > 4 && +this.value  <= 7){
+            } else if (+this.value > 4 && +this.value <= 7) {
                 nowSailerPosition = 4;
                 rangeSailerStatus.value = 4;
                 changeHeart(nowSailerPosition);
-            } else if(+this.value  > 7){
+            } else if (+this.value > 7) {
                 nowSailerPosition = 5;
                 rangeSailerStatus.value = 5;
                 changeHeart(nowSailerPosition);
             }
         }
-        if(+konsultantVal.value >= 1 && nowSailerPosition != 11) {
+        if (+konsultantVal.value >= 1 && nowSailerPosition != 11) {
             bigkonsultantDiscountDop.value = numberFormat(Math.round(returnNumFor(bigkonsultantNum.value) * bigkonsultantDiscount.value / 100 / tax * disc), 0, ',', ' ');
-        } else if(+konsultantVal.value >= 0 && nowSailerPosition == 11){
+        } else if (+konsultantVal.value >= 0 && nowSailerPosition == 11) {
             bigkonsultantDiscountDop.value = numberFormat(Math.round(returnNumFor(bigkonsultantNum.value) * bigkonsultantDiscount.value / 100 / tax * disc), 0, ',', ' ');
         } else {
             bigkonsultantDiscountDop.value = 0;
@@ -1003,6 +1062,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         recalculate(nowSailerPosition);
         changeSize(bigkonsultantDiscountDop);
+        hideColorEmptyInputs(bigkonsultantAct);
     };
 
     directorVal.oninput = function () {
@@ -1011,27 +1071,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (this.value <= 99) {
             tableShortDiscount.value = 0;
-        } else if(this.value > 99 && this.value <= 299) {
+        } else if (this.value > 99 && this.value <= 299) {
             if (allTr.length <= 2) {
                 tableShortDiscount.value = 4;
             } else if (allTr.length > 2 && allTr.length <= 4) {
                 tableShortDiscount.value = 4.5;
-            } else if(allTr.length > 4) {
+            } else if (allTr.length > 4) {
                 tableShortDiscount.value = 5;
             }
-        } else if(this.value > 299) {
+        } else if (this.value > 299) {
             if (allTr.length <= 2) {
                 tableShortDiscount.value = 5;
             } else if (allTr.length > 2 && allTr.length <= 4) {
                 tableShortDiscount.value = 5.5;
-            } else if(allTr.length > 4) {
+            } else if (allTr.length > 4) {
                 tableShortDiscount.value = 6;
             }
         }
 
         var roubleVal = +this.value * returnNumFor(base.value);
         directorNum.value = numberFormat(Math.round(roubleVal), 0, ',', ' ');
-        if(nowSailerPosition < 11) {
+        if (nowSailerPosition < 11) {
             if (+this.value <= 99) {
                 directorDiscount.value = 5;
                 director2Num2.value = 0;
@@ -1062,7 +1122,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (+this.value > 599 && +this.value <= 699) {
                 directorDiscount.value = 13;
                 director2Num2.value = "1 300";
-            }else if (+this.value > 699) {
+            } else if (+this.value > 699) {
                 directorDiscount.value = 13;
                 director2Num2.value = "2 000";
             }
@@ -1071,18 +1131,18 @@ document.addEventListener('DOMContentLoaded', function() {
             director2Num2.value = 0;
         }
 
-        if(+this.value < 100 && nowSailerPosition < 11 && nowSailerPosition >= 7){
+        if (+this.value < 100 && nowSailerPosition < 11 && nowSailerPosition >= 7) {
             //warning2.style.display = "block";
-            if(nowSailerPosition < 11) {
+            if (nowSailerPosition < 11) {
                 bigdirectorProfit.value = 0;
                 sumOfAllDiectors.value = 0;
             }
             //this.style.background = '#f00';
-        } else{
-            if(nowSailerPosition < 11){
+        } else {
+            if (nowSailerPosition < 11) {
                 var tableVolumeSm = document.querySelectorAll('.table-volume-sm');
                 var groupItogS = 0;
-                for(var o = 0; o < tableVolumeSm.length; o++){
+                for (var o = 0; o < tableVolumeSm.length; o++) {
                     groupItogS += +tableVolumeSm[o].value;
                 }
                 bigdirectorProfit.value = numberFormat(Math.round(groupItogS * returnNumFor(base.value) * +tableShortDiscount.value / 100 / tax * disc), 0, ',', ' ');
@@ -1100,16 +1160,17 @@ document.addEventListener('DOMContentLoaded', function() {
         changeSize(director2Num2);
         changeSize(sumOfAllDiectors);
         changeSize(bigdirectorProfit);
+        hideColorEmptyInputs(directorVal);
     };
 
     // //пересчет итога
     function tableCalculate() {
         var groupItog = 0;
-        for(var o = 0; o < tableVolumeSm.length; o++){
+        for (var o = 0; o < tableVolumeSm.length; o++) {
             groupItog += +tableVolumeSm[o].value;
             //console.log(tableVolume[o].value);
         }
-        if(+directorVal.value >= 100){
+        if (+directorVal.value >= 100) {
             bigdirectorProfit.value = Math.round(groupItog * returnNumFor(base.value) * bigdirectorDiscount.value / 100 / tax * disc);
         }
     };
@@ -1283,10 +1344,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // };
 
 
-
-
-
-
     //
     biggestdirectorVal2.oninput = function () {
         var roubleVal = +this.value * returnNumFor(base.value);
@@ -1312,141 +1369,141 @@ document.addEventListener('DOMContentLoaded', function() {
         changeSize(biggestdirector2Num3);
     };
 
-    function changeBottomRange(pos){
-        if(pos == 0){
+    function changeBottomRange(pos) {
+        if (pos == 0) {
             amountDebut.style.left = "5px";
             biggestdirectorActVall.style.left = "3px";
-        } else if(pos == 1){
+        } else if (pos == 1) {
             amountDebut.style.left = "25px";
             biggestdirectorActVall.style.left = "23px";
-        } else if(pos == 2){
+        } else if (pos == 2) {
             amountDebut.style.left = "50px";
             biggestdirectorActVall.style.left = "50px";
-        } else if(pos == 3){
+        } else if (pos == 3) {
             amountDebut.style.left = "75px";
             biggestdirectorActVall.style.left = "74px";
-        } else if(pos == 4){
+        } else if (pos == 4) {
             amountDebut.style.left = "100px";
             biggestdirectorActVall.style.left = "98px";
-        } else if(pos == 5){
+        } else if (pos == 5) {
             amountDebut.style.left = "123px";
             biggestdirectorActVall.style.left = "122px";
-        } else if(pos == 6){
+        } else if (pos == 6) {
             amountDebut.style.left = "147px";
             biggestdirectorActVall.style.left = "146px";
-        } else if(pos == 7){
+        } else if (pos == 7) {
             amountDebut.style.left = "172px";
             biggestdirectorActVall.style.left = "170px";
-        } else if(pos == 8){
+        } else if (pos == 8) {
             amountDebut.style.left = "195px";
             biggestdirectorActVall.style.left = "194px";
-        } else if(pos == 9){
+        } else if (pos == 9) {
             amountDebut.style.left = "217px";
             biggestdirectorActVall.style.left = "216px";
-        } else if(pos == 10){
+        } else if (pos == 10) {
             amountDebut.style.left = "242px";
             biggestdirectorActVall.style.left = "239px";
-        } else if(pos == 11){
+        } else if (pos == 11) {
             amountDebut.style.left = "265px";
             biggestdirectorActVall.style.left = "262px";
-        } else if(pos == 12){
+        } else if (pos == 12) {
             amountDebut.style.left = "290px";
             biggestdirectorActVall.style.left = "287px";
-        } else if(pos == 13){
+        } else if (pos == 13) {
             amountDebut.style.left = "313px";
             biggestdirectorActVall.style.left = "310px";
-        } else if(pos == 14){
+        } else if (pos == 14) {
             amountDebut.style.left = "337px";
             biggestdirectorActVall.style.left = "334px";
-        } else if(pos == 15){
+        } else if (pos == 15) {
             amountDebut.style.left = "362px";
             biggestdirectorActVall.style.left = "359px";
-        } else if(pos == 16){
+        } else if (pos == 16) {
             amountDebut.style.left = "385px";
             biggestdirectorActVall.style.left = "382px";
-        } else if(pos == 17){
+        } else if (pos == 17) {
             amountDebut.style.left = "408px";
             biggestdirectorActVall.style.left = "405px";
-        } else if(pos == 18){
+        } else if (pos == 18) {
             amountDebut.style.left = "433px";
             biggestdirectorActVall.style.left = "430px";
-        } else if(pos == 19){
+        } else if (pos == 19) {
             amountDebut.style.left = "457px";
             biggestdirectorActVall.style.left = "454px";
-        } else if(pos == 20){
+        } else if (pos == 20) {
             amountDebut.style.left = "483px";
             biggestdirectorActVall.style.left = "481px";
         }
     }
 
-    function changeBonusRange(pos){
-        if(pos == 0){
+    function changeBonusRange(pos) {
+        if (pos == 0) {
             amountDebutBonus.style.left = "5px";
             biggestdirectorActVallBonus.style.left = "3px";
-        } else if(pos == 1){
+        } else if (pos == 1) {
             amountDebutBonus.style.left = "25px";
             biggestdirectorActVallBonus.style.left = "23px";
-        } else if(pos == 2){
+        } else if (pos == 2) {
             amountDebutBonus.style.left = "50px";
             biggestdirectorActVallBonus.style.left = "50px";
-        } else if(pos == 3){
+        } else if (pos == 3) {
             amountDebutBonus.style.left = "75px";
             biggestdirectorActVallBonus.style.left = "74px";
-        } else if(pos == 4){
+        } else if (pos == 4) {
             amountDebutBonus.style.left = "100px";
             biggestdirectorActVallBonus.style.left = "98px";
-        } else if(pos == 5){
+        } else if (pos == 5) {
             amountDebutBonus.style.left = "123px";
             biggestdirectorActVallBonus.style.left = "122px";
-        } else if(pos == 6){
+        } else if (pos == 6) {
             amountDebutBonus.style.left = "147px";
             biggestdirectorActVallBonus.style.left = "146px";
-        } else if(pos == 7){
+        } else if (pos == 7) {
             amountDebutBonus.style.left = "172px";
             biggestdirectorActVallBonus.style.left = "170px";
-        } else if(pos == 8){
+        } else if (pos == 8) {
             amountDebutBonus.style.left = "195px";
             biggestdirectorActVallBonus.style.left = "194px";
-        } else if(pos == 9){
+        } else if (pos == 9) {
             amountDebutBonus.style.left = "217px";
             biggestdirectorActVallBonus.style.left = "216px";
-        } else if(pos == 10){
+        } else if (pos == 10) {
             amountDebutBonus.style.left = "242px";
             biggestdirectorActVallBonus.style.left = "239px";
-        } else if(pos == 11){
+        } else if (pos == 11) {
             amountDebutBonus.style.left = "265px";
             biggestdirectorActVallBonus.style.left = "262px";
-        } else if(pos == 12){
+        } else if (pos == 12) {
             amountDebutBonus.style.left = "290px";
             biggestdirectorActVallBonus.style.left = "287px";
-        } else if(pos == 13){
+        } else if (pos == 13) {
             amountDebutBonus.style.left = "313px";
             biggestdirectorActVallBonus.style.left = "310px";
-        } else if(pos == 14){
+        } else if (pos == 14) {
             amountDebutBonus.style.left = "337px";
             biggestdirectorActVallBonus.style.left = "334px";
-        } else if(pos == 15){
+        } else if (pos == 15) {
             amountDebutBonus.style.left = "362px";
             biggestdirectorActVallBonus.style.left = "359px";
-        } else if(pos == 16){
+        } else if (pos == 16) {
             amountDebutBonus.style.left = "385px";
             biggestdirectorActVallBonus.style.left = "382px";
-        } else if(pos == 17){
+        } else if (pos == 17) {
             amountDebutBonus.style.left = "408px";
             biggestdirectorActVallBonus.style.left = "405px";
-        } else if(pos == 18){
+        } else if (pos == 18) {
             amountDebutBonus.style.left = "433px";
             biggestdirectorActVallBonus.style.left = "430px";
-        } else if(pos == 19){
+        } else if (pos == 19) {
             amountDebutBonus.style.left = "457px";
             biggestdirectorActVallBonus.style.left = "454px";
-        } else if(pos == 20){
+        } else if (pos == 20) {
             amountDebutBonus.style.left = "483px";
             biggestdirectorActVallBonus.style.left = "481px";
         }
     }
 
-    if(isIE){
+    if (isIE) {
         biggestdirectorAct.onchange = function () {
             biggestdirector2NumAct.value = numberFormat((+this.value * bonusForNdNev), 0, ',', ' ');
             biggestdirectorActVall.innerHTML = this.value;
@@ -1501,19 +1558,20 @@ document.addEventListener('DOMContentLoaded', function() {
             var year = this.getAttribute("data-year");
             var bonus;
 
-            if(year == "one") {
+            if (year == "one") {
                 bonus = 234;
-            } else if(year == "two-three") {
+            } else if (year == "two-three") {
                 bonus = 140;
-            } else if(year == "four-five") {
+            } else if (year == "four-five") {
                 bonus = 105;
             }
 
             this.dataset.bonus = +this.value * bonus;
 
             recalcBonus();
+            hideColorEmptyInputs(this);
         };
-    };
+    }
 
     /*internationalLevel.addEventListener('change', changeInternationalLevel);
 
@@ -1531,7 +1589,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for (var i = 0; i < biggestdirectorBounusInputs.length; i++) {
             var bonus = biggestdirectorBounusInputs[i].getAttribute("data-bonus");
 
-            if(bonus === null) {
+            if (bonus === null) {
                 bonus = 0;
             }
 
@@ -1550,7 +1608,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //таблица для обычных директоров (маленькая)
     //добавить строку в таблицу
-    tableShortPlus.onclick = function(e){
+    tableShortPlus.onclick = function (e) {
         e.preventDefault();
         var tableShortChangeRowspan = document.querySelector('#tableShortChangeRowspan'); // добавляем значение rowspan
         var thisRowspan = tableShortChangeRowspan.getAttribute('rowspan');
@@ -1558,7 +1616,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var allTrR = document.querySelectorAll('.table-rows-group-sm');
         var dirCounter = allTrR.length + 1;
-        var innerContent = '<td><input type="text" value="Директор '+ dirCounter + ' " class="table-name change-inputs"></td>\n' +
+        var innerContent = '<td><input type="text" value="Директор ' + dirCounter + ' " class="table-name change-inputs"></td>\n' +
             '<td><input type="text" value="" class="table-volume-sm change-inputs"></td>\n';
         var lastTrtest1 = document.querySelector('.table-rows-group-sm:last-child');
         var newTr = document.createElement('tr');
@@ -1571,26 +1629,26 @@ document.addEventListener('DOMContentLoaded', function() {
         //скидка в зависимости от количества директоров
         if (directorVal.value <= 99) {
             tableShortDiscount.value = 0;
-        } else if(directorVal.value > 99 && directorVal.value <= 299) {
+        } else if (directorVal.value > 99 && directorVal.value <= 299) {
             if (allTr.length <= 2) {
                 tableShortDiscount.value = 4;
             } else if (allTr.length > 2 && allTr.length <= 4) {
                 tableShortDiscount.value = 4.5;
-            } else if(allTr.length > 4) {
+            } else if (allTr.length > 4) {
                 tableShortDiscount.value = 5;
             }
-        } else if(directorVal.value > 299) {
+        } else if (directorVal.value > 299) {
             if (allTr.length <= 2) {
                 tableShortDiscount.value = 5;
             } else if (allTr.length > 2 && allTr.length <= 4) {
                 tableShortDiscount.value = 5.5;
-            } else if(allTr.length > 4) {
+            } else if (allTr.length > 4) {
                 tableShortDiscount.value = 6;
             }
         }
 
         tableVolumeSm = document.querySelectorAll('.table-volume-sm');
-        for(var j = 0; j < tableVolumeSm.length; j++){
+        for (var j = 0; j < tableVolumeSm.length; j++) {
             tableVolumeSm[j].addEventListener('input', calculatetableShort);
         }
         calculatetableShort();
@@ -1598,10 +1656,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     //удалить строку из таблицы
-    tableShortMinus.onclick = function(e){
+    tableShortMinus.onclick = function (e) {
         e.preventDefault();
         var allTr = document.querySelectorAll('.table-rows-group-sm');
-        if(allTr.length >= 2) {
+        if (allTr.length >= 2) {
             var deleteElement = document.querySelector('.table-rows-group-sm:last-child');
             deleteElement.parentNode.removeChild(deleteElement);
         }
@@ -1609,40 +1667,40 @@ document.addEventListener('DOMContentLoaded', function() {
         //скидка в зависимости от количества директоров
         if (directorVal.value <= 99) {
             tableShortDiscount.value = 0;
-        } else if(directorVal.value > 99 && directorVal.value <= 299) {
+        } else if (directorVal.value > 99 && directorVal.value <= 299) {
             if (allTr.length - 1 <= 2) {
                 tableShortDiscount.value = 4;
             } else if (allTr.length - 1 > 2 && allTr.length - 1 <= 4) {
                 tableShortDiscount.value = 4.5;
-            } else if(allTr.length - 1 > 4) {
+            } else if (allTr.length - 1 > 4) {
                 tableShortDiscount.value = 5;
             }
-        } else if(directorVal.value > 299) {
+        } else if (directorVal.value > 299) {
             if (allTr.length - 1 <= 2) {
                 tableShortDiscount.value = 5;
             } else if (allTr.length - 1 > 2 && allTr.length - 1 <= 4) {
                 tableShortDiscount.value = 5.5;
-            } else if(allTr.length - 1 > 4) {
+            } else if (allTr.length - 1 > 4) {
                 tableShortDiscount.value = 6;
             }
         }
 
         tableVolumeSm = document.querySelectorAll('.table-volume');
-        for(var j = 0; j < tableVolumeSm.length; j++){
+        for (var j = 0; j < tableVolumeSm.length; j++) {
             tableVolumeSm[j].addEventListener('input', calculatetableShort);
         }
         calculatetableShort();
     }
 
     //подсчет прибыли
-    for(var j = 0; j < tableVolumeSm.length; j++){
+    for (var j = 0; j < tableVolumeSm.length; j++) {
         tableVolumeSm[j].addEventListener('input', calculatetableShort);
         tableVolumeSm[j].addEventListener('focus', warning2ColorOfFields);
         tableVolumeSm[j].addEventListener('blur', warning2ColorOfFHide);
     }
 
 
-    function calculatetableShort(){
+    function calculatetableShort() {
         var allVolumeSum = 0;
         var amountOfKons = 0;
         var allVolume = document.querySelectorAll('.table-volume-sm'); //объем всех заказов
@@ -1650,7 +1708,7 @@ document.addEventListener('DOMContentLoaded', function() {
             allVolumeSum += +allVolume[k].value;
             amountOfKons++;
         }
-        if(+directorVal.value >= 100) {
+        if (+directorVal.value >= 100) {
             bigdirectorProfit.value = numberFormat(Math.round(allVolumeSum * returnNumFor(base.value) * +tableShortDiscount.value / 100 / tax * disc), 0, ',', ' ');
             sumOfAllDiectors.value = numberFormat(Math.round(allVolumeSum * returnNumFor(base.value)), 0, ',', ' ');
         } else {
@@ -1666,18 +1724,15 @@ document.addEventListener('DOMContentLoaded', function() {
             nowSailerPosition = 7;
             rangeSailerStatus.value = 7;
             changeHeart(nowSailerPosition);
-        }
-        else if (amountOfKons > 2 && amountOfKons <= 4) {
+        } else if (amountOfKons > 2 && amountOfKons <= 4) {
             nowSailerPosition = 8;
             rangeSailerStatus.value = 8;
             changeHeart(nowSailerPosition);
-        }
-        else if (amountOfKons > 4 && amountOfKons <= 7) {
+        } else if (amountOfKons > 4 && amountOfKons <= 7) {
             nowSailerPosition = 9;
             rangeSailerStatus.value = 9;
             changeHeart(nowSailerPosition);
-        }
-        else if (amountOfKons > 7) {
+        } else if (amountOfKons > 7) {
             nowSailerPosition = 10;
             rangeSailerStatus.value = 10;
             changeHeart(nowSailerPosition);
@@ -1686,16 +1741,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-
     //таблица для НД большая
     //добавить строку
-    tableFirstLineGroupsPlus.onclick = function(e){
+    tableFirstLineGroupsPlus.onclick = function (e) {
         e.preventDefault();
         var allGropFirstLineTr = document.querySelectorAll('.table-rows-group');
 
         var dirBigCounter = allGropFirstLineTr.length + 1;
 
-        var innerContent = '<td class="show-biggestdirect notshowfrom768"></td><td><input type="text" value="Директор '+ dirBigCounter +'" class="table-name change-inputs"></td>\n' +
+        var innerContent = '<td class="show-biggestdirect notshowfrom768"></td><td><input type="text" value="Директор ' + dirBigCounter + '" class="table-name change-inputs"></td>\n' +
             '                        <td><input type="text" value="" class="table-volume change-inputs"></td>\n' +
             '                        <td class="show-biggestdirect"><input type="text" disabled value="5" class="results-inputs table-percent"></td>\n' +
             '                        <td class="show-biggestdirect"><input type="text" disabled value="0" class="results-inputs table-commission"></td>';
@@ -1707,17 +1761,17 @@ document.addEventListener('DOMContentLoaded', function() {
         //insertAfter(newTr, lastTrtestBig);
         twoLine.parentNode.insertBefore(newTr, twoLine);
         tableVolume = document.querySelectorAll('.table-volume');
-        for(var f = 0; f < tableVolume.length; f++){
+        for (var f = 0; f < tableVolume.length; f++) {
             tableVolume[f].addEventListener('input', calculatetableBig);
         }
     }
 
     //удалить строку
-    tableFirstLineGroupsMinus.onclick = function(e){
+    tableFirstLineGroupsMinus.onclick = function (e) {
         e.preventDefault();
         var allGropFirstLineTr = document.querySelectorAll('.table-rows-group');
-        if(allGropFirstLineTr.length >= 9) {
-            var deleteElement = document.querySelector('.table-rows-group:nth-child('+ (allGropFirstLineTr.length+1) +')');
+        if (allGropFirstLineTr.length >= 9) {
+            var deleteElement = document.querySelector('.table-rows-group:nth-child(' + (allGropFirstLineTr.length + 1) + ')');
             deleteElement.parentNode.removeChild(deleteElement);
         }
 
@@ -1727,20 +1781,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //подсчет большой таблицы
-    for(var f = 0; f < tableVolume.length; f++){
+    for (var f = 0; f < tableVolume.length; f++) {
         tableVolume[f].addEventListener('input', calculatetableBig);
     }
 
-    function calculatetableBig(){
+    function calculatetableBig() {
         var thisPercentVal = this.parentNode.nextElementSibling.children[0];
         var thisCommisVal = this.parentNode.nextElementSibling.nextElementSibling.children[0];
-        if(+this.value < 99){
+        if (+this.value < 99) {
             persThis = 5;
-        } else if(+this.value >= 100 && +this.value < 200){
+        } else if (+this.value >= 100 && +this.value < 200) {
             persThis = 6;
-        } else if(+this.value >= 200 && +this.value < 500){
+        } else if (+this.value >= 200 && +this.value < 500) {
             persThis = 7;
-        } else if(+this.value >= 500){
+        } else if (+this.value >= 500) {
             persThis = 8;
         }
         thisPercentVal.value = persThis;
@@ -1756,7 +1810,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //считаем всю большую таблицу
-    function calculateBigTableAll(){
+    function calculateBigTableAll() {
         var allCommissionsSum = 0;
         var allComissions = document.querySelectorAll('.table-commission');
         for (var k = 0; k < allComissions.length; k++) {
@@ -1767,14 +1821,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //меняем подпись в зависимости от newSailerPosition
-    function changeItogLabel(pos){
-        if(+pos == 1){
+    function changeItogLabel(pos) {
+        if (+pos == 1) {
             itogLabel.innerHTML = 'Сумма дохода от личного бизнеса';
             labelChange1.innerHTML = 'Дополнительная скидка';
-        } else if(+pos > 1 && +pos <= 5){
+        } else if (+pos > 1 && +pos <= 5) {
             itogLabel.innerHTML = 'Общая сумма дополнительной скидки и дохода от личного бизнеса';
             labelChange1.innerHTML = 'Дополнительная скидка';
-        } else if(+pos > 5 && +pos <= 11){
+        } else if (+pos > 5 && +pos <= 11) {
             itogLabel.innerHTML = 'Общая сумма комиссионного вознаграждения и дохода от личного бизнеса';
             labelChange1.innerHTML = 'Комиссионное вознаграждение';
         }
