@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var konsultantProfit = document.querySelector('#konsultantProfit'); //консультант доход
     //  var radioBtnContainer = document.querySelector('#radioBtnContainer'); // контейнер радиокнопок
 //    var radioBtnContainerTooltip = document.querySelector('#radioBtnContainer .radioBtn-container-tooltip'); //подсказка радиокнопок
-    var tooltipMoreEight = document.querySelector('#tooltipMoreEight'); //скидка более 8 б.е.
+    //var tooltipMoreEight = document.querySelector('#tooltipMoreEight'); //скидка более 8 б.е.
     var tooltipSmall = document.querySelector('#tooltipSmall'); // подсказка менее 8 б.е.
     var snoskaNum1 = document.querySelector('#snoskaNum1'); //сноска убираем для консультанта
     var snoskaNum4 = document.querySelector('#snoskaNum4'); //сноска убираем для консультанта
@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var director2Num1 = document.querySelector('#director2Num1'); //директор расчетное значение 1
     var director2Num2 = document.querySelector('#director2Num2'); //директор расчетное значение 1
+    var director2Num2Img = document.querySelector('.director2Num2Img'); //директор расчетное значение 1
     var labelFordirector2Num2 = document.querySelector('#labelFordirector2Num2'); //директор расчетное значение label
     var sailerStatus3Container = document.querySelector('#sailerStatus3Container'); //контейнер директор
     //var labelChange2 = document.querySelector('#labelChange2'); //подпись скидок для директора и выше
@@ -227,7 +228,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //для значка рубль меняем ширину input
     function changeSize(elem){
-        return elem.style.width = ((elem.value.length) * 13) + 'px';
+        if(elem.id == "itog") {
+            return elem.style.width = ((elem.value.length) * 14.6) + 'px';
+        } else {
+            return elem.style.width = ((elem.value.length) * 13) + 'px';
+        }
     }
     function changeSizeSmall(elem){
         return elem.style.width = ((elem.value.length) * 10) + 'px';
@@ -350,6 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
             //warning2.style.display = "block";
             //warning1.style.display = "block";
             director2Num2.style.display = "inline-block";
+            director2Num2Img.style.display = "inline-block";
             labelFordirector2Num2.style.display = "block";
             director2Num2Span.style.display = "inline-block";
             stylesDouble.classList.add('mary-key-design-double');
@@ -361,6 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
             //warning2.style.display = "none";
             //warning1.style.display = "none";
             director2Num2.style.display = "none";
+            director2Num2Img.style.display = "none";
             labelFordirector2Num2.style.display = "none";
             director2Num2Span.style.display = "none";
             //console.log(bigdirectorVal.value);
@@ -469,6 +476,7 @@ document.addEventListener('DOMContentLoaded', function() {
             //warning2.style.display = "block";
             //warning1.style.display = "block";
             director2Num2.style.display = "inline-block";
+            director2Num2Img.style.display = "inline-block";
             labelFordirector2Num2.style.display = "block";
             director2Num2Span.style.display = "inline-block";
             stylesDouble.classList.add('mary-key-design-double');
@@ -480,6 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // warning2.style.display = "none";
             //warning1.style.display = "none";
             director2Num2.style.display = "none";
+            director2Num2Img.style.display = "none";
             labelFordirector2Num2.style.display = "none";
             director2Num2Span.style.display = "none";
             //console.log(bigdirectorVal.value);
@@ -587,6 +596,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 //warning2.style.display = "block";
                 //warning1.style.display = "block";
                 director2Num2.style.display = "inline-block";
+                director2Num2Img.style.display = "inline-block";
                 labelFordirector2Num2.style.display = "block";
                 director2Num2Span.style.display = "inline-block";
                 stylesDouble.classList.add('mary-key-design-double');
@@ -598,6 +608,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // warning2.style.display = "none";
                 //warning1.style.display = "none";
                 director2Num2.style.display = "none";
+                director2Num2Img.style.display = "none";
                 labelFordirector2Num2.style.display = "none";
                 director2Num2Span.style.display = "none";
                 //console.log(bigdirectorVal.value);
@@ -647,7 +658,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 + returnNumFor(director2Num2.value) + returnNumFor(biggestdirector2NumAct.value)
                 +returnNumFor(biggestdirectorBounusResult.value) ), 0, '.', ' ') + ' ₽';
         }
-        //changeSize(itog);
+        changeSize(itog);
         init();
     }
 
@@ -808,7 +819,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // selectDiscount2.disabled = true;
             // selectDiscount3.disabled = true;
             // selectDiscount4.disabled = true;
-            tooltipMoreEight.style.display = "none";
+            //tooltipMoreEight.style.display = "none";
         } else if(+this.value >= 1 && +this.value < 3){
             selectDiscount2.checked="checked";
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +selectDiscount2.value / 100), 0, '.', ' ');
@@ -816,7 +827,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // selectDiscount2.disabled = true;
             // selectDiscount3.disabled = true;
             // selectDiscount4.disabled = true;
-            tooltipMoreEight.style.display = "none";
+            //tooltipMoreEight.style.display = "none";
         } else if(+this.value >= 3 && +this.value < 8){
             selectDiscount3.checked="checked";
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +selectDiscount3.value / 100), 0, '.', ' ');
@@ -824,11 +835,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // selectDiscount2.disabled = true;
             // selectDiscount3.disabled = true;
             // selectDiscount4.disabled = true;
-            tooltipMoreEight.style.display = "none";
+            //tooltipMoreEight.style.display = "none";
         } else if(+this.value >= 8){
             selectDiscount4.checked="checked";
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +selectDiscount4.value / 100), 0, '.', ' ');
-            tooltipMoreEight.style.display = "block";
+            //tooltipMoreEight.style.display = "block";
             // selectDiscount1.disabled = false;
             // selectDiscount2.disabled = false;
             // selectDiscount3.disabled = false;
@@ -870,9 +881,9 @@ document.addEventListener('DOMContentLoaded', function() {
         changeSize(konsultantProfit);
     };
 
-    konsultantVal.onblur = function(){
+    /*konsultantVal.onblur = function(){
         tooltipMoreEight.style.display = "none";
-    };
+    };*/
 
 
     for(var l = 0; l < konsultantDiscountRadio.length; l++){
