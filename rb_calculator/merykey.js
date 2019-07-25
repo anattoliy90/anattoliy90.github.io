@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var directorVal = document.querySelector('#directorVal'); //директор вводимое значение
     var directorNum = document.querySelector('#directorNum'); //директор расчетное значение
     var directorDiscount = document.querySelector('#directorDiscount'); //директор скидка
-    //var internationalLevelBlock = document.querySelector('.international-level-block');
-    //var internationalLevel = document.querySelector('#internationalLevel'); //процент международного уровеня
+    var internationalLevelBlock = document.querySelector('.international-level-block');
+    var internationalLevel = document.querySelector('#internationalLevel'); //процент международного уровеня
 
     var director2Num1 = document.querySelector('#director2Num1'); //директор расчетное значение 1
     var director2Num2 = document.querySelector('#director2Num2'); //директор расчетное значение 1
@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sailerStatus3Container.style.display = "none";
             snoskaNum1.style.display = "none";
             snoskaNum4.style.display = "none";
-            //internationalLevelBlock.style.display = "none";
+            internationalLevelBlock.style.display = "none";
             //twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             //firstTrNotBigDirector.style.display = "none";
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
             biggestdirector.style.display = "none";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
-            //internationalLevelBlock.style.display = "none";
+            internationalLevelBlock.style.display = "none";
             //twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             //firstTrNotBigDirector.style.display = "none";
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
-            //internationalLevelBlock.style.display = "none";
+            internationalLevelBlock.style.display = "none";
             // twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "none";
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
-            //internationalLevelBlock.style.display = "none";
+            internationalLevelBlock.style.display = "none";
             // twoLine.style.display = "none";
             // thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "table-row";
@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
-            //internationalLevelBlock.style.display = "flex";
+            internationalLevelBlock.style.display = "flex";
             //twoLine.style.display = "table-row";
             //thirdLine.style.display = "table-row";
             //firstTrNotBigDirector.style.display = "none";
@@ -426,6 +426,11 @@ document.addEventListener('DOMContentLoaded', function () {
             stylesDouble.classList.remove('mary-key-design-double');
             //stylesBorderDelete.style.borderBottom = "1px solid #e74783";
         }
+
+        if(nowSailerPosition == 2) {
+            bigkonsultant.style.display = "none";
+        }
+
         //warning1ColorOfFields();
         warning1ColorOfFHide();
         warning2ColorOfFHide();
@@ -451,7 +456,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sailerStatus3Container.style.display = "none";
             snoskaNum1.style.display = "none";
             snoskaNum4.style.display = "none";
-            //internationalLevelBlock.style.display = "none";
+            internationalLevelBlock.style.display = "none";
             //twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             //firstTrNotBigDirector.style.display = "none";
@@ -466,7 +471,7 @@ document.addEventListener('DOMContentLoaded', function () {
             biggestdirector.style.display = "none";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
-            //internationalLevelBlock.style.display = "none";
+            internationalLevelBlock.style.display = "none";
             //twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             //firstTrNotBigDirector.style.display = "none";
@@ -481,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
-            //internationalLevelBlock.style.display = "none";
+            internationalLevelBlock.style.display = "none";
             // twoLine.style.display = "none";
             //thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "none";
@@ -498,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
-            //internationalLevelBlock.style.display = "none";
+            internationalLevelBlock.style.display = "none";
             // twoLine.style.display = "none";
             // thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "table-row";
@@ -514,7 +519,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sailerStatus3Container.style.display = "flex";
             snoskaNum1.style.display = "block";
             snoskaNum4.style.display = "block";
-            //internationalLevelBlock.style.display = "flex";
+            internationalLevelBlock.style.display = "flex";
             //twoLine.style.display = "table-row";
             //thirdLine.style.display = "table-row";
             //firstTrNotBigDirector.style.display = "none";
@@ -549,6 +554,11 @@ document.addEventListener('DOMContentLoaded', function () {
             stylesDouble.classList.remove('mary-key-design-double');
             //stylesBorderDelete.style.borderBottom = "1px solid #e74783";
         }
+
+        if(nowSailerPosition == 2) {
+            bigkonsultant.style.display = "none";
+        }
+
         //warning1ColorOfFields();
         //warning2ColorOfFields();
         warning1ColorOfFHide();
@@ -573,7 +583,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sailerStatus3Container.style.display = "none";
                 snoskaNum1.style.display = "none";
                 snoskaNum4.style.display = "none";
-                //internationalLevelBlock.style.display = "none";
+                internationalLevelBlock.style.display = "none";
                 //twoLine.style.display = "none";
                 //thirdLine.style.display = "none";
                 //firstTrNotBigDirector.style.display = "none";
@@ -588,7 +598,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 biggestdirector.style.display = "none";
                 snoskaNum1.style.display = "block";
                 snoskaNum4.style.display = "block";
-                //internationalLevelBlock.style.display = "none";
+                internationalLevelBlock.style.display = "none";
                 //twoLine.style.display = "none";
                 //thirdLine.style.display = "none";
                 //firstTrNotBigDirector.style.display = "none";
@@ -603,7 +613,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sailerStatus3Container.style.display = "flex";
                 snoskaNum1.style.display = "block";
                 snoskaNum4.style.display = "block";
-                //internationalLevelBlock.style.display = "none";
+                internationalLevelBlock.style.display = "none";
                 // twoLine.style.display = "none";
                 //thirdLine.style.display = "none";
                 // firstTrNotBigDirector.style.display = "none";
@@ -620,7 +630,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sailerStatus3Container.style.display = "flex";
                 snoskaNum1.style.display = "block";
                 snoskaNum4.style.display = "block";
-                //internationalLevelBlock.style.display = "none";
+                internationalLevelBlock.style.display = "none";
                 // twoLine.style.display = "none";
                 // thirdLine.style.display = "none";
                 // firstTrNotBigDirector.style.display = "table-row";
@@ -636,7 +646,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sailerStatus3Container.style.display = "flex";
                 snoskaNum1.style.display = "block";
                 snoskaNum4.style.display = "block";
-                //internationalLevelBlock.style.display = "flex";
+                internationalLevelBlock.style.display = "flex";
                 //twoLine.style.display = "table-row";
                 //thirdLine.style.display = "table-row";
                 //firstTrNotBigDirector.style.display = "none";
@@ -671,6 +681,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 stylesDouble.classList.remove('mary-key-design-double');
                 //stylesBorderDelete.style.borderBottom = "1px solid #e74783";
             }
+
+            if(nowSailerPosition == 2) {
+                bigkonsultant.style.display = "none";
+            }
+
             //warning1ColorOfFields();
             //warning2ColorOfFields();
             warning1ColorOfFHide();
@@ -688,18 +703,18 @@ document.addEventListener('DOMContentLoaded', function () {
 //re-calculate summ value than user change sail-level
     function recalculate(sailPosition) {
         if (+sailPosition == 1) {
-            itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value)), 0, '.', ' ') + ' ₽';
+            itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value)), 0, '.', ' ') + ' Br';
         } else if (+sailPosition > 1 && +sailPosition <= 5) {
             if (+konsultantVal.value == 0) {
                 bigkonsultantDiscountDop.value = 0;
             }
-            itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value) + returnNumFor(bigkonsultantDiscountDop.value)), 0, '.', ' ') + ' ₽';
+            itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value) + returnNumFor(bigkonsultantDiscountDop.value)), 0, '.', ' ') + ' Br';
         } else if (+sailPosition == 6) {
             if (+konsultantVal.value == 0) {
                 bigkonsultantDiscountDop.value = 0;
             }
             itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value) + returnNumFor(bigkonsultantDiscountDop.value) + returnNumFor(director2Num1.value)
-                + returnNumFor(director2Num2.value)), 0, '.', ' ') + ' ₽';
+                + returnNumFor(director2Num2.value)), 0, '.', ' ') + ' Br';
         } else if (+sailPosition > 6 && +sailPosition <= 10) {
             if (+konsultantVal.value == 0) {
                 bigkonsultantDiscountDop.value = 0;
@@ -708,14 +723,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 bigdirectorProfit.value = 0;
             }
             itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value) + returnNumFor(bigkonsultantDiscountDop.value) + returnNumFor(director2Num1.value)
-                + returnNumFor(bigdirectorProfit.value) + returnNumFor(director2Num2.value)), 0, '.', ' ') + ' ₽';
+                + returnNumFor(bigdirectorProfit.value) + returnNumFor(director2Num2.value)), 0, '.', ' ') + ' Br';
         } else if (+sailPosition == 11) {
             bigkonsultantDiscountDop.value = numberFormat(Math.round(returnNumFor(bigkonsultantNum.value) * bigkonsultantDiscount.value / 100 / tax * disc), 0, ',', ' ');
 
             itog.value = numberFormat(Math.round(returnNumFor(konsultantProfit.value) + returnNumFor(bigkonsultantDiscountDop.value) + returnNumFor(director2Num1.value)
                 + returnNumFor(bigdirectorProfitBig.value) + returnNumFor(biggestdirector2Num2.value) + returnNumFor(biggestdirector2Num3.value)
                 + returnNumFor(director2Num2.value) + returnNumFor(biggestdirector2NumAct.value)
-                + returnNumFor(biggestdirectorBounusResult.value)), 0, '.', ' ') + ' ₽';
+                + returnNumFor(biggestdirectorBounusResult.value)), 0, '.', ' ') + ' Br';
         }
         changeSize(itog);
         init();
@@ -760,9 +775,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             directorDiscount.value = 13;
 
-            /*if(internationalLevel.checked) {
+            if(internationalLevel.checked) {
                 directorDiscount.value = 18;
-            }*/
+            }
 
             director2Num2.value = 0;
         }
@@ -1132,6 +1147,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         } else {
             directorDiscount.value = 13;
+
+            if (internationalLevel.checked) {
+                directorDiscount.value = 18;
+            }
+
             director2Num2.value = 0;
         }
 
@@ -1577,7 +1597,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
-    /*internationalLevel.addEventListener('change', changeInternationalLevel);
+    internationalLevel.addEventListener('change', changeInternationalLevel);
 
     function changeInternationalLevel() {
         if (internationalLevel.checked) {
@@ -1585,7 +1605,10 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             directorDiscount.value = 13;
         }
-    }*/
+
+        recalculatePersent(nowSailerPosition);
+        recalculate(nowSailerPosition);
+    }
 
     function recalcBonus() {
         var allBonusSum = 0;

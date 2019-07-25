@@ -106,15 +106,15 @@ label,
 }
 
 .international-level-block .internationalLevelLabel::before {
-    content: '';
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 14px;
     position: absolute;
-    top: 5px;
-    left: -21px;
+    top: 2px;
+    left: -24px;
     display: none;
-    width: 8px;
-    height: 8px;
-    background: #ed7fa6;
-    border-radius: 50%;
+    color: #ed7fa6;
     z-index: 10;
 }
 
@@ -128,7 +128,6 @@ label,
     height: 16px;
     background: #f0f0f0;
     border: 1px solid #dbdbdb;
-    border-radius: 50%;
     z-index: 1;
 }
 
@@ -580,7 +579,7 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
 }
 
 #itog {
-    width: 44px;
+    width: 59px;
     font-family: 'HevBold';
     font-size: 30px;
     color: #e74783;
