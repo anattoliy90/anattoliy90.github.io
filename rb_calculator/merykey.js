@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //для значка рубль меняем ширину input
     function changeSize(elem) {
         if (elem.id == "itog") {
-            return elem.style.width = ((elem.value.length) * 14.6) + 'px';
+            return elem.style.width = ((elem.value.length) * 14.8) + 'px';
         } else {
             return elem.style.width = ((elem.value.length) * 13) + 'px';
         }
@@ -436,6 +436,7 @@ document.addEventListener('DOMContentLoaded', function () {
         changeItogLabel(nowSailerPosition);
         recalculate(nowSailerPosition);
         colorEmptyInputs();
+        changetableShortRows(nowSailerPosition);
     };
 
 
@@ -558,6 +559,7 @@ document.addEventListener('DOMContentLoaded', function () {
         changeItogLabel(nowSailerPosition);
         recalculate(this.value);
         colorEmptyInputs();
+        changetableShortRows(nowSailerPosition);
     };
     if (isIE) {
         //range-change
@@ -679,6 +681,7 @@ document.addEventListener('DOMContentLoaded', function () {
             changeItogLabel(nowSailerPosition);
             recalculate(this.value);
             colorEmptyInputs();
+            changetableShortRows(nowSailerPosition);
         };
     }
 
@@ -929,11 +932,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // this.style.background = 'transparent';
         }
 
-        if (+this.value < 8 && selectDiscount4.checked == "checked") {
+        if (selectDiscount4.checked) {
             tooltipSmall.style.display = "block";
         } else {
             tooltipSmall.style.display = "none";
         }
+
         recalculate(nowSailerPosition);
         changeSize(bigkonsultantDiscountDop);
         changeSizeSmall(konsultantNum);
@@ -961,7 +965,7 @@ document.addEventListener('DOMContentLoaded', function () {
             konsultantProfit.value = numberFormat(Math.round(returnNumFor(konsultantNum.value) * +this.value / 100), 0, ',', ' ');
         }
 
-        if (+konsultantVal.value < 8 && +this.value == 45) {
+        if (+this.value == 45) {
             tooltipSmall.style.display = "block";
         } else {
             tooltipSmall.style.display = "none";
@@ -1699,6 +1703,79 @@ document.addEventListener('DOMContentLoaded', function () {
         tableVolumeSm[j].addEventListener('blur', warning2ColorOfFHide);
     }
 
+    //Вывод определенного числа строк таблица для директоров
+    function changetableShortRows(rangeStatus) {
+        var rowLength = 2;
+
+        if(rangeStatus == 8) {
+            rowLength = 4;
+        } else if(rangeStatus == 9) {
+            rowLength = 7;
+        } else if(rangeStatus == 10) {
+            rowLength = 8;
+        }
+
+        var tableShortChangeRowspan = document.querySelector('#tableShortChangeRowspan'); // добавляем значение rowspan
+        var thisRowspan = tableShortChangeRowspan.getAttribute('rowspan');
+        tableShortChangeRowspan.setAttribute('rowspan', thisRowspan + 1);
+        var allTrR = document.querySelectorAll('.table-rows-group-sm');
+
+        if(allTrR.length < rowLength) {
+            for(var i = allTrR.length; i < rowLength; i++) {
+                var dirCounter = i + 1;
+                var innerContent = '<td><input type="text" value="Директор ' + dirCounter + ' " class="table-name change-inputs"></td>\n' + '<td><input type="text" value="" class="table-volume-sm change-inputs"></td>\n';
+                var lastTrtest1 = document.querySelector('.table-rows-group-sm:last-child');
+                var newTr = document.createElement('tr');
+                newTr.className = "table-rows-group-sm";
+                newTr.innerHTML = innerContent;
+
+                insertAfter(newTr, lastTrtest1);
+            }
+
+            var allTr = document.querySelectorAll('.table-rows-group-sm');
+
+            //скидка в зависимости от количества директоров
+            if (allTr.length <= 2) {
+                tableShortDiscount.value = 5;
+            } else if (allTr.length > 2 && allTr.length <= 4) {
+                tableShortDiscount.value = 5.5;
+            } else if (allTr.length > 4 && allTr.length <= 7) {
+                tableShortDiscount.value = 6;
+            } else if (allTr.length >= 8) {
+                tableShortDiscount.value = 6.5;
+            }
+            tableVolumeSm = document.querySelectorAll('.table-volume-sm');
+            for (var j = 0; j < tableVolumeSm.length; j++) {
+                tableVolumeSm[j].addEventListener('input', calculatetableShort);
+            }
+            calculatetableShort();
+        } else if(allTrR.length > rowLength) {
+            for(var i = allTrR.length; i > rowLength; i--) {
+                var deleteElement = document.querySelector('.table-rows-group-sm:last-child');
+                deleteElement.parentNode.removeChild(deleteElement);
+            }
+
+            var allTr = document.querySelectorAll('.table-rows-group-sm');
+
+            //скидка в зависимости от количества директоров
+            if (allTr.length - 1 <= 2) {
+                tableShortDiscount.value = 5;
+            } else if (allTr.length - 1 > 2 && allTr.length - 1 <= 4) {
+                tableShortDiscount.value = 5.5;
+            } else if (allTr.length - 1 > 4 && allTr.length - 1 <= 7) {
+                tableShortDiscount.value = 6;
+            } else if (allTr.length - 1 >= 8) {
+                tableShortDiscount.value = 6.5;
+            }
+
+            tableVolumeSm = document.querySelectorAll('.table-volume');
+            for (var j = 0; j < tableVolumeSm.length; j++) {
+                tableVolumeSm[j].addEventListener('input', calculatetableShort);
+            }
+
+            calculatetableShort();
+        }
+    }
 
     function calculatetableShort() {
         var allVolumeSum = 0;

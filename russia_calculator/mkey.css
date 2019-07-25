@@ -579,7 +579,7 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
 }
 
 #itog {
-    width: 40px;
+    width: 44px;
     font-family: 'HevBold';
     font-size: 30px;
     color: #e74783;
