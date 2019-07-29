@@ -1784,7 +1784,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var innerContent = '<td class="show-biggestdirect notshowfrom768"></td><td><input type="text" value="Директор ' + dirBigCounter + '" class="table-name change-inputs"></td>\n' +
             '                        <td><input type="text" value="" class="table-volume change-inputs"></td>\n' +
             '                        <td class="show-biggestdirect"><input type="text" disabled value="5" class="results-inputs table-percent"></td>\n' +
-            '                        <td class="show-biggestdirect"><input type="text" disabled value="0" class="results-inputs table-commission"></td>';
+            '                        <td class="show-biggestdirect last-td"><input type="text" disabled value="0" class="results-inputs table-commission"></td>';
         // var lastTrtest2 = document.querySelector('.table-rows-group:last-child');
         var newTr = document.createElement('tr');
         newTr.className = "table-rows-group";

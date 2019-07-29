@@ -1115,6 +1115,20 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
     .table-mary-key td, .table-mary-key th {
         padding: 0;
     }
+
+    .table-small-container #tableShort,
+    .table-big-container #tableFirstLineGroups {
+        width: 99%;
+        margin: 0 auto;
+    }
+
+    .table-small-container .table-btn-container-small,
+    .table-big-container .table-btn-container {
+        position: relative;
+        margin-top: 20px;
+        right: auto;
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 550px) {
