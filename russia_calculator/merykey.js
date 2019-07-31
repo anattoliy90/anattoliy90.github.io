@@ -380,6 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // twoLine.style.display = "none";
             // thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "table-row";
+            changetableShortRows(nowSailerPosition);
         }
         if (this.value == 'sailer-5') {
             konsultant.style.display = "flex";
@@ -436,7 +437,6 @@ document.addEventListener('DOMContentLoaded', function () {
         changeItogLabel(nowSailerPosition);
         recalculate(nowSailerPosition);
         colorEmptyInputs();
-        changetableShortRows(nowSailerPosition);
     };
 
 
@@ -502,6 +502,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // twoLine.style.display = "none";
             // thirdLine.style.display = "none";
             // firstTrNotBigDirector.style.display = "table-row";
+            changetableShortRows(nowSailerPosition);
         }
         if (this.value == 11) {
             konsultant.style.display = "flex";
@@ -559,7 +560,6 @@ document.addEventListener('DOMContentLoaded', function () {
         changeItogLabel(nowSailerPosition);
         recalculate(this.value);
         colorEmptyInputs();
-        changetableShortRows(nowSailerPosition);
     };
     if (isIE) {
         //range-change
@@ -624,6 +624,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // twoLine.style.display = "none";
                 // thirdLine.style.display = "none";
                 // firstTrNotBigDirector.style.display = "table-row";
+                changetableShortRows(nowSailerPosition);
             }
             if (this.value == 11) {
                 konsultant.style.display = "flex";
@@ -681,7 +682,6 @@ document.addEventListener('DOMContentLoaded', function () {
             changeItogLabel(nowSailerPosition);
             recalculate(this.value);
             colorEmptyInputs();
-            changetableShortRows(nowSailerPosition);
         };
     }
 
