@@ -979,6 +979,11 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
     margin-top: 3px;
 }
 
+.CTTable1,
+.CTTable1TD {
+    background-color: transparent!important;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1250px) {
     /*.wrapper{*/
     /*width: 100%;*/
