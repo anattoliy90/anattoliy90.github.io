@@ -97,7 +97,8 @@ label,
 
 .international-level-block {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
+    margin-bottom: 12px;
 }
 
 .international-level-block .internationalLevelLabel {
@@ -940,7 +941,36 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
 }
 
 #director .mary-key-design {
-    justify-content: center;
+    justify-content: space-around;
+}
+
+#director .mary-key-design .discount-percent {
+    margin-top: 12px;
+}
+
+#director .mary-key-design .results-inputs {
+    margin-top: 8px;
+}
+
+#director .mary-key-design .results-inputs-right {
+    padding: 0;
+}
+
+.table-big-container #tableFirstLineGroups .show-biggestdirect,
+.table-big-container #tableFirstLineGroups .show-biggestdirect .results-inputs {
+    text-align: center;
+}
+
+#konsultant > .container-key-item {
+    display: flex;
+}
+
+#konsultant > .container-key-item .mary-key-design {
+    justify-content: space-around;
+}
+
+#konsultant > .container-key-item .mary-key-design .discount-percent {
+    margin-top: 3px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1250px) {
@@ -1135,11 +1165,21 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
     .mary-key-design-bonus-block .bonus-block-input-container {
         flex-direction: column;
     }
-}
 
-@media screen and (max-width: 550px) {
     #bigkonsultant .container-key-item {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    #konsultant > .container-key-item {
+        flex-direction: column;
+    }
+
+    #director > div {
+        flex-direction: column;
+    }
+
+    #director .mary-key-design {
+        justify-content: flex-start;
     }
 }
