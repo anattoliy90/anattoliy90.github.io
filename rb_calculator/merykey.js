@@ -429,6 +429,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if(nowSailerPosition == 2) {
             bigkonsultant.style.display = "none";
+            snoskaNum1.style.display = "none";
+            snoskaNum4.style.display = "none";
         }
 
         //warning1ColorOfFields();
