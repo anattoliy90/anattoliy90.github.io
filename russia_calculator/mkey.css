@@ -14,6 +14,11 @@
     src: url(fonts/MaryKayScriptCyrillicBold.otf);
 }
 
+@font-face {
+    font-family: HevLight;
+    src: url(fonts/HelveticaNeueCyr-Light.otf);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -979,6 +984,27 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
     margin-top: 3px;
 }
 
+.disclaimer {
+    background-image: url("image/disclaimer.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 11px 80px 11px 35px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.disclaimer p {
+    font-family: 'HevLight';
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.disclaimer p span {
+    font-family: 'HevRoman';
+}
+
 .CTTable1,
 .CTTable1TD {
     background-color: transparent!important;
@@ -1169,6 +1195,14 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
         margin-top: 20px;
         right: auto;
         max-width: 100%;
+    }
+
+    .disclaimer {
+        padding: 10px;
+    }
+
+    .disclaimer p {
+        font-size: 16px;
     }
 }
 
