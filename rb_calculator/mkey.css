@@ -973,6 +973,7 @@ input[name="radioBtn"]:checked + .mary-key-radiolabel::before {
 
 #konsultant > .container-key-item {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #konsultant > .container-key-item .mary-key-design {
