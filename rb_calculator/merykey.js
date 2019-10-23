@@ -220,10 +220,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //make constants
-    base.value = "100";
+    base.value = "110";
     var tax = 1.2;
     var disc = 0.6;
-    var bonusForNdNev = 4010;
+    var bonusForNdNev = 4411;
     var bonusForNdDev = 42000;
 
     //для значка рубль меняем ширину input
@@ -1585,11 +1585,11 @@ document.addEventListener('DOMContentLoaded', function () {
             var bonus;
 
             if (year == "one") {
-                bonus = 234;
+                bonus = 257;
             } else if (year == "two-three") {
-                bonus = 140;
+                bonus = 154;
             } else if (year == "four-five") {
-                bonus = 105;
+                bonus = 116;
             }
 
             this.dataset.bonus = +this.value * bonus;
